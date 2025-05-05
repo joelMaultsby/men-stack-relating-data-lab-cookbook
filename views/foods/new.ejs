@@ -1,0 +1,15 @@
+<%- include('../partials/_navbar.ejs') %>
+
+<h1>Add a New Food Item</h1>
+
+<form action="/users/<%= user._id %>/foods/" method="POST">
+  <label for="title">Food Name:</label><br>
+  <input type="text" name="title" id="title"><br><br>
+
+  <label for="recipe">Recipe to Make The Food:</label><br>
+  <textarea name="recipe" id="recipe"></textarea><br><br>
+
+  <button type="submit">Add Food item</button>
+</form>
+
+

@@ -1,0 +1,15 @@
+<%- include('../partials/_navbar.ejs') %>
+
+<div class="container">
+  <h1>Explore Our Community</h1>
+
+  <ul>
+    <% users.forEach(user => { %>
+      <li>
+        <%= user.username %> —
+        <a href="/users/<%= user._id %>/foods">View Pantry</a>
+      </li>
+    <% }) %>
+  </ul>
+</div>
+

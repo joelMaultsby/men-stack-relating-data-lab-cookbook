@@ -1,0 +1,17 @@
+<%- include('../partials/_navbar.ejs') %>
+
+<h1><%= food.title %></h1>
+
+<h3><%= food.recipe %></h3>
+
+<a href="/users/<%= user._id %>/foods">Go Back to Home</a>
+
+<div style="margin-top: 15px;">
+  <form action="/users/<%= user._id %>/foods/<%= food._id %>?_method=DELETE" method="POST" style="display:inline;">
+    <button type="submit">Delete this item</button>
+  </form>
+
+  <a href="/users/<%= user._id %>/foods/<%= food._id %>/edit">
+    <button>Edit this food</button>
+  </a>
+</div>

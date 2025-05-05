@@ -1,0 +1,15 @@
+<nav style="background-color: #f9ff33 ; padding: 2rem; border-bottom: 2px solid #ddd;">
+  <div style="display: flex; gap: 1rem; align-items: center;">
+    <a href="/" style="text-decoration: none; color: #333;">Home</a>
+
+    <% if(user) { %>
+      <a href="/users/<%= user._id %>/foods" style="text-decoration: none; color: #333;">My Pantry</a>
+      <a href="/users/<%= user._id %>/foods/new" style="text-decoration: none; color: #333;">Add New Food</a>
+      <a href="/users" style="text-decoration: none; color: #333;">Explore Our Community</a>
+      <a href="/auth/sign-out" style="text-decoration: none; color: #333;">Sign Out</a>
+    <% } else { %>
+      <a href="/auth/sign-in" style="text-decoration: none; color: #333;">Sign In</a>
+      <a href="/auth/sign-up" style="text-decoration: none; color: #333;">Sign Up</a>
+    <% } %>
+  </div>
+</nav>
